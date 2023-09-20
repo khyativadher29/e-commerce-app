@@ -1,4 +1,4 @@
-import Signup from "../organisms/signup";
+import Signup from "../organisms/Signup";
 
 function SignupPage(){
     return(

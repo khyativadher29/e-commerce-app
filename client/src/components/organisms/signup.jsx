@@ -7,7 +7,6 @@ import ImgTag from "../atoms/ImgTag";
 import { Formik, Form } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup";
-import SocialIcon from "../molecules/SocialIcon";
 import { API_BASE_URL } from "../../config";
 const initialValues = {
   firstName: "",
@@ -73,16 +72,9 @@ function Signup() {
             <Form className="form-width">
               <div className=" d-flex justify-content-between align-items-center">
                 <div className="signup-logo">Sign Up</div>
-                <div className="website-logo d-flex justify-content-center align-items-center">
-                  <ImgTag
-                    className="w-100"
-                    imgUrl="/assets/images/logo1.png"
-                    altText="backgroud img"
-                  />
-                </div>
               </div>
               <div className="msg position-absolute w-100">
-                {msg && msg === "User created successfully!" ? (
+                {msg && msg == "User created successfully!" ? (
                   <p className="text-danger">Signup successfull!</p>
                 ) : msg ? (
                   <p className="text-success">Please check your details!</p>
@@ -168,14 +160,6 @@ function Signup() {
                 type="submit"
                 className="btn w-100 signup-btn"
                 buttonText="Signup"
-              />
-              <div className="sign-up__badge text-center">
-                <span className="badge badge-secondary badge-bg">OR</span>
-              </div>
-              <SocialIcon
-                divClass="social-icons my-2 text-center"
-                imgClass="w-100"
-                urlArr={["google.png", "facebook.png", "mail.png"]}
               />
               <small
                 id="emailHelp"
